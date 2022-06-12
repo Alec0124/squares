@@ -1,0 +1,69 @@
+body, #app {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#app {
+    display: grid;
+    grid-template: 900px / 320px 1fr;
+    height: 100%;
+}
+
+#dots {
+    display: grid;
+    grid-template: repeat(11, 96px) / repeat(11, 96px);
+    margin: 15px;
+    grid-area: 1 / 2 / 2 / 3;
+}
+.cell {
+    /* border: 1px solid black; */
+    display: inline-block;
+    position: relative;
+}
+#console {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.dot {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    height: 25px;
+    width: 25px;
+}
+.active {
+    background-color: red;
+}
+.top {
+    border-top: 1px solid black;
+}
+.bottom {
+    border-bottom: 1px solid black;
+}
+.left {
+    border-left: 1px solid black;
+}
+.right {
+    border-right: 1px solid black;
+}
+.cell > span {
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 40%;
+}
+.player-window {
+    border: 2px solid black;
+    padding: 4px;
+    margin: 8px;
+    border-radius: 12px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.player-window > div {
+    flex: 1 0 32px;
+}
+.color-box {
+    border: 1px solid black;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
